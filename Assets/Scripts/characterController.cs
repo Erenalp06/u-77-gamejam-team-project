@@ -8,7 +8,7 @@ public class characterController : MonoBehaviour
     public float jumpForce = 10f;
 
     private Rigidbody2D rigidbody2D;
-    private bool isGrounded, jumping;
+    [SerializeField]private bool isGrounded, jumping;
     
 
     private SpriteRenderer spriteRenderer;
@@ -31,8 +31,8 @@ public class characterController : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        if(isGrounded){
-            jumping = true;
+        if(isGrounded){ //burda if(!isGrounded) jumping = true; yada if(isGrounded) jumping = false; olmasý gerekmiyor mu??
+            jumping = false;
         }
 
     }
@@ -43,18 +43,16 @@ public class characterController : MonoBehaviour
 
         float moveInput = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("speed", Mathf.Abs(Input.GetAxisRaw("Horizontal")));
-        rigidbody2D.velocity = new Vector2(moveInput * moveSpeed, rigidbody2D.velocity.y);
+        rigidbody2D.velocity = new Vector2(moveInput * moveSpeed, rigidbody2D.velocity.y); 
 
-        if(Input.GetKeyDown(KeyCode.Space)){
-            if(jumping){
-                isGrounded = false;         
+        if(Input.GetKey(KeyCode.Space) && isGrounded){
+            //if(jumping){
+            //    isGrounded = false;         
+            //} 
             print("jump");
-            animator.SetTrigger("jump");
-            rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            jumping = false;
-
-            }
-            
+            animator.SetTrigger("jump");rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            jumping = true;
+            isGrounded = false;
         }
 
         animator.SetBool("isGrounded", isGrounded);
