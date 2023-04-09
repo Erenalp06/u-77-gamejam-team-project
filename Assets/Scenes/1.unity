@@ -948,8 +948,10 @@ MonoBehaviour:
     lines:
     - "Merhaba, ben At\u0131l Samanc\u0131oglu."
     - "Akademi Macerana Ho\u015Fgeldin!"
-    - "Burada seni zorlu b\xF6l\xFCmler bekliyor olacak!"
-    - "Her birini tek tek ba\u015Far\u0131yla ge\xE7ersen mezun olabileceksin."
+    - "Unutma bu yolculukta  dikkat etmelisin zor engeller ve tehlikeli canavarlar
+      \xE7\u0131kabilir canavarlara sak\u0131n yakalanma!"
+    - "Her birini tek tek ba\u015Far\u0131yla ge\xE7ersen mezuniyet diploman\u0131
+      alabilirsin."
     - "\xD6ncelikle bir kariyer yolu belirlemeli ve gerekli bilgileri bana vermelisin."
     - "Ba\u015Flamaya haz\u0131r m\u0131s\u0131n yoksa arkana bakmadan ka\xE7acak
       m\u0131s\u0131n?"
@@ -1192,10 +1194,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 069436d2eb6704746bef2c6030f719a5, type: 3}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0

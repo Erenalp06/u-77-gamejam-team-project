@@ -175,10 +175,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4f62989c340864aa43b05a82269869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSounds: []
+  musicSounds:
+  - soundName: theme1
+    clip: {fileID: 8300000, guid: 90dc08b3c78ae0d4fa49392c48716768, type: 3}
   sfxSounds:
   - soundName: entry-screen
-    clip: {fileID: 8300000, guid: 0156a292fc0da044b90a4a05c1620b46, type: 3}
+    clip: {fileID: 8300000, guid: 52fb80ddd6d260f459b8ee0739dde85c, type: 3}
+  - soundName: character-dead
+    clip: {fileID: 8300000, guid: 1b9a995207194bc4fb97b9f310d3e896, type: 3}
+  - soundName: jump
+    clip: {fileID: 8300000, guid: ffea41947935ebb449aa102774ff0fed, type: 3}
+  - soundName: collectible
+    clip: {fileID: 8300000, guid: 4f39e4c50d6c6814fa0bdb2d10dc02af, type: 3}
+  - soundName: level-pass
+    clip: {fileID: 8300000, guid: 8a79f1abfc5a8f14aa67a440703027af, type: 3}
   musicSource: {fileID: 2982780967071064869}
   sfxSource: {fileID: 7137435602590360580}
   writingSource: {fileID: 1171300239}
@@ -354,7 +364,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.252
   m_Pitch: 1
   Loop: 0
   Mute: 0

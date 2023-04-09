@@ -30,7 +30,7 @@ public class SliderMovement : MonoBehaviour
         
         if(other.gameObject.CompareTag("wall1")){
             
-            moveDirection *= -1;
+            speed = 0;
             
             
         }

@@ -9,6 +9,8 @@ TagManager:
   - npc1
   - wall2
   - wall1
+  - verticalObstacle
+  - icon_youtube
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,8 @@ public class EntryDialog : MonoBehaviour
 
     [SerializeField] string entryText;
 
+    public static int count = 0;
+
     [SerializeField] int letterPerSecond;
     
 
@@ -22,8 +24,13 @@ public class EntryDialog : MonoBehaviour
     
     void Awake()
     {
+        
         Instance = this;
-        Instance.ShowDialog();
+        if(count == 0){
+            Instance.ShowDialog();
+            
+        }
+        
              
              
     }
@@ -31,8 +38,11 @@ public class EntryDialog : MonoBehaviour
     
     void Start()
     {
-        AudioManager.Instance.PlaySFX("entry-screen");
-        AudioManager.Instance.writingSource.PlayOneShot(AudioManager.Instance.writingSource.clip);   
+        if(count == 0){
+            AudioManager.Instance.PlaySFX("entry-screen");
+        AudioManager.Instance.writingSource.PlayOneShot(AudioManager.Instance.writingSource.clip); 
+        count++;
+        }  
     }
 
     public void ShowDialog(){       
@@ -60,6 +70,7 @@ public class EntryDialog : MonoBehaviour
         if(!isTyping && test){
             StartCoroutine(WaitForSecond());
             print("yazı bitti");
+            AudioManager.Instance.PlayMusic("theme1");
             test = false;
         }
     }
